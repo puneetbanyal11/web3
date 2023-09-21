@@ -1,7 +1,7 @@
 const pattern = /^[a-zA-Z0-9]+[ ,=]\d+$/
 
 export const validInput = (stringToBeValidated) => {
-  const {address , amount}  = getEthAddressAmount(stringToBeValidated);
+  const {address}  = getEthAddressAmount(stringToBeValidated);
   return pattern.test(stringToBeValidated) && address.length === 42
 }
 

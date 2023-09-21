@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Col, Space, Typography} from 'antd'
+import {Button, Space, Typography} from 'antd'
 
 export const DuplicateCTA = (props) => {
   const {onKeepFirst, onCombine} = props

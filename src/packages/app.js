@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Editor from './editor'
-import {Row, Col, Button, Space, Card, Alert, Typography} from 'antd'
+import {Button, Space, Card} from 'antd'
 import {ErrorMessage} from './errorMessage'
 import {validateAddressAmountData} from '../utils/util'
 
