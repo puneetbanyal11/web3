@@ -12,11 +12,12 @@ export const getEthAddressAmount = (line) => {
 }
 
 export const getErrorMsgs = (errorArray) => {
+  // eslint-disable-next-line
   return errorArray.map((err) => {
     if (err.error === 'INVALID') return `Line ${err.lineNumbers} wrong amount`
 
-    if (err.error === 'DUPLICATE')
-      return `Address ${err.address} encountered duplicate in line ${err.lineNumbers}`
+    if (err.error === 'DUPLICATE'){
+      return `Address ${err.address} encountered duplicate in line ${err.lineNumbers}`}
   })
 }
 
@@ -58,7 +59,7 @@ export const validateAddressAmountData = (addressAndAmountData) => {
 
   addressAndAmountData.forEach((line, index) => {
     if (validInput(line)) {
-      const {address: eithAddress, amount} = getEthAddressAmount(line)
+      const {address: eithAddress} = getEthAddressAmount(line)
 
       if (addressMap.has(eithAddress)) {
         const addressOccurance = addressMap.get(eithAddress)

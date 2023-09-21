@@ -5,7 +5,7 @@ function Editor(props) {
   const {data, setData} = props
   const onChange = React.useCallback((value, viewUpdate) => {
     setData(value, viewUpdate)
-  }, [])
+  }, [setData])
 
   return (
     <>
